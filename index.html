@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Donut Shop</title>
+  <link href="testserver.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+    <section class="wrapper">
+      <h1 id="greeting"> The Donut Shop </h1>
+       <nav>
+        <ul>
+          <li><a href="http://www.snopes.com/food/ingredient/donutsprinkles.asp" class="links">Sprinkles</a></li>
+          <li><a href="http://en.wikipedia.org/wiki/Doughnut">Glazes</a></li>
+          <li><a href="http://www.seattletimes.com/seattle-news/crime/seattle-robbers-haul-1-maple-bar/">Maple Bars</a></li>
+          <li><a href="">Store Locations</a></li>
+        </ul>
+      </nav>
+    </section>
+<section class="columns clearfix">
+  <section class="leftbox"></section>
+  <section class="container">
+    <table id="table1">
+      <thead><tr>
+        <th scope="col">Location</th>
+        <th scope="col">7:00 AM</th>
+        <th scope="col">8:00 AM</th>
+        <th scope="col">9:00 AM</th>
+        <th scope="col">10:00 AM</th>
+        <th scope="col">11:00 AM</th>
+        <th scope="col">12:00 PM</th>
+        <th scope="col">1:00 PM</th>
+        <th scope="col">2:00 PM</th>
+        <th scope="col">3:00 PM</th>
+        <th scope="col">4:00 PM</th>
+        <th scope="col">5:00 PM</th>
+        <th scope="col">Total</th>
+      </tr></thead>
+      <tbody id="tablebody"></tbody>
+    </table>
+      <!-- <p class="instructions"> To add a new location, please complete the following fields:</p> -->
+    <form id="new-location-form">
+      <p class="instructions"> To add a new location, please complete the following fields:</p>
+        <label for="storelocation">Location:</label>
+        <input name="storelocation" type="text">
+        <label for="averagedonuts">Average Donuts:</label>
+        <input name="averagedonuts" type="text">
+        <label for="mincustomers">Minimum Customers:</label>
+        <input name="mincustomers" type="number">
+        <label for="maxcustomers">Maximum Customers:</label>
+        <input name="maxcustomers" type="number">
+        <button type="submit">Create New Location</button>
+      </p>
+    </form>
+  </section>
+  <section class="rightbox"></section>
+</section>
+  <footer>
+    <marquee id="marquee-q">How are sprinkled donuts made?</marquee>
+    <marquee id="marquee-a" behavior="scroll" direction="left"><img src="images/large.jpg" style="width:9.5;height:12em"><img src="images/large.jpg" style="width:9.5;height:12em"><img src="images/large.jpg" style="width:9.5;height:12em"></marquee>
+  </footer>
+<script src="donut_shop.js"></script>
+<script src="donut_shop_events.js"></script>
+
+</body>
+</html>
