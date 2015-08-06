@@ -1,9 +1,11 @@
 
 'use strict'
 
-var http = require('http');
-var fs = require('fs');
-var path = require('path');
+var http = require('http'),
+    fs = require('fs'),
+    path = require('path'),
+    url = require('url'),
+    port = 8675;
 
 http.createServer(function (request, response) {
     console.log('request starting...' + request.url);
@@ -28,6 +30,7 @@ http.createServer(function (request, response) {
       fs.readFile(filePath, function (error, content) {
         if (error) {
           response.writeHead(500);
+          response.write(error + "\n");
           response.end();
         }
         else {
@@ -38,10 +41,11 @@ http.createServer(function (request, response) {
     }
     else {
       response.writeHead(404);
+      response.write("404: Page Not Found\n");
       response.end();
     }
   });
 
-}).listen(8125);
-console.log('Server running at localhost:8125');
+}).listen(port);
+console.log('Server running at localhost:8675');
 
